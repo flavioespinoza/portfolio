@@ -1,0 +1,294 @@
+/* https://codelabs.developers.google.com/codelabs/user-adaptive-interfaces/?utm_source=google-io21&utm_medium=referral&utm_campaign=io21-resources#0  */
+
+svg {
+  block-size: 2rem;
+}
+
+input {
+  outline-offset: 5px;
+}
+
+:root {
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 6rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  padding-block-start: var(--space-xs);
+  padding-block-end: var(--space-xs);
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+small {
+  line-height: 1.5;
+}
+
+main {
+  display: grid;
+  gap: var(--space-xl);
+  place-content: center;
+  padding: var(--space-sm);
+}
+
+form {
+  --repeat: auto-fit;
+  max-width: 89vw;
+  display: grid;
+  gap: var(--space-xl) var(--space-xxl);
+  align-items: flex-start;
+  grid-template-columns: 
+    repeat(var(--repeat), minmax(min(10ch, 100%), 35ch));
+}
+
+section {
+  display: grid;
+  gap: var(--space-md);
+}
+
+header {
+  display: grid;
+  gap: var(--space-xxs);
+}
+
+fieldset {
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  border-radius: var(--space-sm);
+  overflow: hidden;
+}
+
+.fieldset-item {
+  display: grid;
+  grid-template-columns: var(--space-lg) 1fr;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.fieldset-item > picture {
+  block-size: var(--space-xl);
+  inline-size: var(--space-xl);
+  clip-path: circle(50%);
+  display: inline-grid;
+  place-content: center;
+}
+
+/* If you are a direct decendant of .fieldset-item that is a <picture> or <input> with type checkbox place yourself into the center. */
+.fieldset-item > :is(picture, input[type="checkbox"]) {
+  place-self: center;
+}
+
+/* setting icon size and creating a box around the icon so that it will be contained within a circle. */
+.fieldset-item svg {
+  block-size: var(--space-md);
+}
+
+.sm-stack {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+/* Change size of checkboxes. */
+input[type="checkbox"] {
+  inline-size: var(--space-sm);
+  block-size: var(--space-sm);
+}
+
+/* ----- Add more space around yourself as there is more space in the viewport. ----- */
+/* if the screen width is greater than 540px increase padding of <main> to lg */
+@media (min-width: 540px) {
+  main {
+    padding: var(--space-lg);
+  }
+}
+
+/* if the screen width is greater than 800px increase padding of <main> to xl */
+@media (min-width: 800px) {
+  main {
+    padding: var(--space-xl);
+  }
+}
+
+/* If device orientation is landscape and the width is greater than 640px provide two columns */
+@media (orientation: landscape) and (min-width: 640px) {
+  form {
+    --repeat: 2;
+  }
+}
+
+/* If viewport width is greater than 540px provide more padding around elements with the class .fieldset-item */
+@media (min-width: 540px) {
+  .fieldset-item {
+    grid-template-columns: var(--space-xxl) 1fr;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-xl) var(--space-md) 0;
+  }
+}
+
+/* -------- color -------- */
+
+/* Brand channels */
+:root {
+  --hue: 200;
+  --saturation: 100%;
+  --lightness: 50%;
+}
+
+/* Brand */
+:root {
+  --brand: hsl(
+    var(--hue) 
+    calc(var(--saturation) / 2)
+    var(--lightness) 
+  );
+}
+
+/* Text */
+:root {
+  --text1: hsl(var(--hue) 15% 85%);
+  --text2: hsl(var(--hue) 15% 65%);
+}
+
+/* Surface */
+:root {
+  --surface1: hsl(var(--hue) 10% 10%);
+  --surface2: hsl(var(--hue) 10% 15%);
+  --surface3: hsl(var(--hue) 5% 20%);
+  --surface4: hsl(var(--hue) 5% 25%);
+}
+
+/* -------- Light Theme -------- */
+
+/* Brand */
+@media (prefers-color-scheme: light) {
+  :root {
+    --brand: hsl(
+      var(--hue) 
+      var(--saturation)
+      var(--lightness) 
+    );
+  }
+}
+
+/* Text */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text1: hsl(
+      var(--hue) 
+      var(--saturation)
+      10% 
+    );
+
+    --text2: hsl(
+      var(--hue) 
+      calc(var(--saturation) / 2)
+      30%
+    );
+  }
+}
+
+/* Surface */
+@media (prefers-color-scheme: light) {
+  :root {
+    --surface1: hsl(var(--hue) 20% 90%);
+    --surface2: hsl(var(--hue) 10% 99%);
+    --surface3: hsl(var(--hue) 10% 96%);
+    --surface4: hsl(var(--hue) 10% 85%);
+  }
+}
+
+/* -------- Use the Light Theme color system -------- */
+
+/* <body> */
+body {
+  background: var(--surface1);
+  color: var(--text1);
+}
+
+/* <fieldset> */
+fieldset {
+  border: 1px solid var(--surface4);
+  background: var(--surface4);
+}
+
+.fieldset-item {
+  background: var(--surface3);
+}
+
+.fieldset-item > picture {
+  background: var(--surface4);
+}
+
+.fieldset-item svg {
+  fill: var(--text2);
+}
+
+.fieldset-item:focus-within svg {
+  fill: var(--brand);
+}
+
+small {
+  color: var(--text2);
+}
+
+:root {
+  color-scheme: dark light;
+}
+
+/* -------- Animations -------- */
+
+/* Interaction Styles */
+/* <fieldset> */
+fieldset {
+  transition: box-shadow .3s ease;
+}
+
+fieldset:focus-within {
+  box-shadow: 0 5px 20px -10px hsl(0 0% 0% / 50%);
+}
+
+/* .fieldset-item */
+.fieldset-item {
+  transition: background .2s ease;
+}
+
+.fieldset-item:focus-within {
+  background: var(--surface2);
+}
+
+/* .fieldset-item > picture */
+@media (prefers-reduced-motion: no-preference) {
+  .fieldset-item > picture {
+    clip-path: circle(40%);
+    transition: clip-path .3s ease;
+  }
+
+  .fieldset-item:focus-within picture {
+    clip-path: circle(50%);
+  }
+}
+

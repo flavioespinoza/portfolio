@@ -1,0 +1,153 @@
+#compContainer {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+#compVolume {
+    position: absolute;
+    width: 1280px;
+    height: 96px;
+    top: 0px;
+    left: 0px;
+    border: 1px solid #CCC;
+}
+#compVolumeChart {
+    position: relative;
+    width: 1130px;
+    height: 84px;
+    margin-top: 6px;
+    float: left;
+    background: #add8e6;
+}
+#attLogo {
+    position: relative;
+    width: 200px;
+    height: 98px;
+    float: right;
+    background: url("../img/logo-att-transparent.png");
+    z-index: 2;
+}
+#compInfluencers {
+    position: absolute;
+    width: 1276px;
+    height: 516px;
+    top: 102px;
+    left: 4px;
+}
+.comp-influencers-ul {
+    width: 314px;
+    height: 516px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.comp-influencers {
+    width: 314px;
+    height: 58px;
+    margin-bottom: 5px;
+    border: 1px solid #CCC;
+}
+#compInfluencersChartA,
+#compInfluencersChartB,
+#compInfluencersChartC,
+#compInfluencersChartD {
+    position: relative;
+    width: 314px;
+    height: 516px;
+    margin-right: 5px;
+    float: left;
+}
+#compInfluencersChartB,
+#compInfluencersChartC,
+#compInfluencersChartD {
+    opacity: 0;
+}
+#compInfluencersToggle {
+    position: absolute;
+    top: 592px;
+    left: 332px;
+    width: 200px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 10;
+}
+#compInfluencersToggle:hover {
+    color: orange;
+}
+#compPinMap {
+    position: absolute;
+    width: 950px;
+    height: 513px;
+    top: 102px;
+    left: 324px;
+    background: url("../img/radar-03.png");
+    border: 1px solid #CCC;
+    overflow: hidden;
+    pointer-events: none;
+}
+#compPinMapChart {
+    position: relative;
+    width: 956px;
+    height: 513px;
+}
+#compPinMapRadar {
+    position: absolute;
+    top: 103px;
+    left: 430px;
+    width: 740px;
+    height: 514px;
+    overflow: hidden;
+}
+#radarImg {
+    position: absolute;
+    top: -113px;
+    left: 0px;
+    pointer-events: none;
+}
+
+#compSentiment {
+     position: absolute;
+     width: 1290px;
+     height: 100px;
+     top: 620px;
+     left: 0px;
+ }
+#compSentimentSprint,
+#compSentimentTmobile,
+#compSentimentVerizon {
+    position: relative;
+    width: 423px;
+    height: 98px;
+    border: 1px solid #CCC;
+    margin-right: 4px;
+    float: left;
+}
+#logoSprint {
+    background: url("../img/logo-sprint.png");
+}
+#logoTmobile {
+    background: url("../img/logo-tmobile.png");
+}
+#logoVerizon {
+    background: url("../img/logo-verizon.png");
+}
+.comp-logo {
+    position: absolute;
+    width: 100px;
+    height: 98px;
+    top: 0px;
+    left: 0px;
+    border-right: 1px solid #CCC;
+}
+#compSentimentSprintChart,
+#compSentimentTmobileChart,
+#compSentimentVerizonChart {
+    position: absolute;
+    width: 324px;
+    height: 98px;
+    top: 0px;
+    left: 98px;
+}
+

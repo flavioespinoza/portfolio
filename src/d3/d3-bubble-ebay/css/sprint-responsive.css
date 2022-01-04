@@ -1,0 +1,83 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #ccc;
+    font-weight: normal;
+}
+.shadow {
+    -moz-box-shadow:    2px 2px 6px 1px #ccc;
+    -webkit-box-shadow: 2px 2px 6px 1px #ccc;
+    box-shadow:         2px 2px 6px 1px #ccc;
+}
+.inner-shadow {
+    -moz-box-shadow:    inset 0 0 10px #ccc;
+    -webkit-box-shadow: inset 0 0 10px #ccc;
+    box-shadow:         inset 0 0 10px #ccc;
+}
+.t20 {
+    margin-top: 20px;
+}
+#sprintContainer {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.container {
+    margin-bottom: 50px;
+}
+#conversationsContainer {
+    position: relative;
+}
+#btnPause {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+#conversationsChart {
+    height: 700px;
+    background: rgba(0, 0, 0, 0.50);
+}
+
+#volumeChart {
+    height: 140px;
+    background: rgba(0, 0, 0, 0.50);
+}
+#sprintShareVoice {
+    height: 240px;
+    background: rgba(0, 0, 0, 0.50);
+}
+#sprintMentionsCarriers {
+    height: 240px;
+    background: rgba(0, 0, 0, 0.50);
+}
+#sprintPosSentiment {
+    height: 240px;
+    background: rgba(0, 0, 0, 0.50);
+}
+#sprintNegSentiment {
+    height: 240px;
+    background: rgba(0, 0, 0, 0.50);
+}
+@media (min-width: 1200px) {
+    #sprintContainer {
+        width: 1230px;
+
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    #sprintContainer {
+        width: 764px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 767px) {
+    #sprintContainer {
+        width: 100%;
+    }
+    #conversationsChart {
+        height: 400px;
+    }
+}
+
+

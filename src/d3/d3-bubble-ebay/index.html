@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Ebay Comparative Influencers Data</title>
+
+    <!-- JQuery -->
+    <script src="docs/assets/js/jquery.js"></script>
+
+    <!-- Modernizr -->
+    <script src="docs/assets/js/modernizr.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="docs/assets/js/bootstrap-transition.js"></script>
+    <script src="docs/assets/js/bootstrap-alert.js"></script>
+    <script src="docs/assets/js/bootstrap-modal.js"></script>
+    <script src="docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="docs/assets/js/bootstrap-tab.js"></script>
+    <script src="docs/assets/js/bootstrap-tooltip.js"></script>
+    <script src="docs/assets/js/bootstrap-popover.js"></script>
+    <script src="docs/assets/js/bootstrap-button.js"></script>
+    <script src="docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="docs/assets/js/bootstrap-typeahead.js"></script>
+
+    <!-- Under Score & Backbone -->
+    <script src="docs/assets/js/underscore.js"></script>
+    <script src="docs/assets/js/backbone.js"></script>
+
+    <!-- d3 Charting Scripts -->
+    <script src="js/libs/d3.min.js"></script>
+    <script src="js/libs/d3.geom.min.js"></script>
+    <script src="js/libs/d3.layout.min.js"></script>
+    <script src="js/libs/d3.csv.min.js"></script>
+
+    <!-- Ebay Scripts -->
+    <script src="js/EbayData.js"></script>
+    <script src="js/EbayBubbleChart.js"></script>
+
+    <!-- Style Sheets -->
+    <link href="docs/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/flippy-2.css" rel="stylesheet" />
+    <link href="css/ebay-bubble.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="topnav">
+      <ul>
+        <li><a class="ebay-nav" href="#">Influencers</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div id="ebayHeaderContainer">
+        <div id="ebayTitle">Comparative Influencers Data</div>
+        <div id="ebayLogo"></div>
+      </div>
+      <div id="ebayDataContainer">
+        <div id="ebayChart">
+          <div class="ebay-navBar">
+            <ul class="ebay-navigation">
+              <li id="ebayNavAll">All Influencers</li>
+              <li id="ebayNavType">Type of Influencers</li>
+              <li id="ebayNavNew">New Influencers</li>
+              <li id="ebayNavTopics">Topics</li>
+              <!--KEEP LINK BELOW FOR FUTURE HISTORICAL COMPARISON-->
+              <!--<li id="ebayNavComparison">Historical</li>-->
+            </ul>
+          </div>
+          <div id="ebay-tooltip">
+            <div id="ebay-tooltipContainer">
+              <div class="ebay-department"></div>
+              <div class="ebay-rule"></div>
+              <div class="ebay-name"></div>
+              <div class="ebay-discretion"></div>
+              <div class="ebay-valuesContainer">
+                <span class="ebay-value"></span>
+                <span class="ebay-change"></span>
+              </div>
+              <div class="ebayChart"></div>
+              <div class="ebay-tail"></div>
+            </div>
+          </div>
+          <div id="ebay-overlays">
+            <div class="ebay-overlay" id="ebay-totalOverlay">
+              <div class="ebay-overview">
+                <h5>Total Influencers: 10,000</h5>
+                <p>Influencers who tweeted about eBay over the past hour.</p>
+                <svg id="ebay-deficitCircle"></svg>
+              </div>
+              <div class="ebay-aside">
+                <p>The data shows a 15% Increase Since the Last Iteration.</p>
+              </div>
+              <div class="ebay-increasesLabel">
+                <span>Most Influential Based on Klout</span>
+              </div>
+              <div class="ebay-decreasesLabel">
+                <span>Least Influential Based on Klout</span>
+              </div>
+              <div id="ebay-colorKey">
+                <p>Circles are sized according to Followers</p>
+                <div id="ebay-sizeKey">
+                  <div style="left: 52px; top: 10px; width: 20px" class="ebay-circleKeyLabel">
+                    <span style="left: 25px">1,000 Followers</span>
+                  </div>
+                  <div style="left: 32px; top: 42px" class="ebay-circleKeyLabel">
+                    <span>100 Followers</span>
+                  </div>
+                  <div style="left: 32px; top: 57px" class="ebay-circleKeyLabel">
+                    <span>10 Folllwers</span>
+                  </div>
+                  <svg id="ebay-scaleKey"></svg>
+                </div>
+                <p>Color Shows Influence Based on Klout</p>
+                <ul class="ebay-colorSwatches">
+                  <li class="change-decrease3"></li>
+                  <li class="change-decrease2"></li>
+                  <li class="change-decrease1"></li>
+                  <li class="change-increase1"></li>
+                  <li class="change-increase2"></li>
+                  <li class="change-increase3"></li>
+                </ul>
+                <ul class="ebay-colorTicks">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="ebay-colorLabels">
+                  <li>&ndash;25</li>
+                  <li>&ndash;5</li>
+                  <li>0</li>
+                  <li>+5</li>
+                  <li>+25</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ebay-overlay" id="ebay-relevantOverlay">
+              <div class="ebay-relevantExplainer"></div>
+              <div class="ebay-relevantAside">
+                <h5>Existing</h5>
+                <p>
+                  <strong style="font-size: 16px; padding-bottom: 4px; display: block">70%</strong>
+                </p>
+                <p>Influencers that have tweeted about eBay before</p>
+              </div>
+              <div class="ebay-discretionaryExplainer"></div>
+              <div class="ebay-discretionaryAside">
+                <h5>New</h5>
+                <p>
+                  <strong style="font-size: 16px; padding-bottom: 4px; display: block">30%</strong>
+                </p>
+                <p>Influencers that have not tweeted about eBay before</p>
+              </div>
+            </div>
+            <div class="ebay-overlay" id="ebay-discretionaryOverlay">
+              <div id="ebay-discretionaryIntro">
+                <h5>New Influencers Based on Relavance to eBay</h5>
+              </div>
+            </div>
+            <div class="ebay-overlay" id="ebay-departmentOverlay"></div>
+            <div class="ebay-overlay" id="ebay-comparisonOverlay">
+              <h5>Comparison Overlay</h5>
+            </div>
+          </div>
+          <div id="ebay-chartCanvas"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var t = 1297110663, // start time (seconds since epoch)
+        v = 250, // start value (subscribers)
+        data = d3.range(48).map(next); // starting dataset
+
+      var w = 40,
+        h = 371;
+
+      var x = d3.scale.linear().domain([0, 1]).range([0, w]);
+
+      var y = d3.scale.linear().domain([0, 200]).rangeRound([0, h]);
+
+      var z = d3.scale.ordinal().range(['#06479d', '#0968e0', '#fde1bc', '#f9b862']);
+
+      function randomString() {
+        var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz';
+        var string_length = 4;
+        var randomstring = '';
+        for (var i = 0; i < string_length; i++) {
+          var rnum = Math.floor(Math.random() * chars.length);
+          randomstring += chars.substring(rnum, rnum + 1);
+        }
+        return randomstring;
+      }
+
+      var randomName = randomString();
+
+      //This function creates random test data of format : time, POSITIVE, NEUTRAL, NEGATIVE
+      function next() {
+        return {
+          time: ++t,
+
+          name: randomName,
+
+          POSITIVE: (v = ~~Math.max(10, Math.min(90, v + 10 * (Math.random() - 0.5)))),
+
+          NEUTRAL: (v = ~~Math.max(10, Math.min(90, v + 10 * (Math.random() - 0.5)))),
+
+          NEGATIVE: (v = ~~Math.max(10, Math.min(90, v + 10 * (Math.random() - 0.5)))),
+
+          MIXED: (v = ~~Math.max(10, Math.min(90, v + 10 * (Math.random() - 0.5)))),
+        };
+      }
+
+      //    console.log(next());
+
+      //This function readjusts the data with one new data point and calls redraw function to replot the graph
+      setInterval(function () {
+        data.shift();
+        data.push(next());
+        redraw(data);
+      }, 1500);
+      //    console.info(JSON.stringify(data));
+
+      var svg = d3
+        .select('#footerChart')
+        .append('svg:svg')
+        .attr('class', 'chart')
+        .attr('width', w * data.length - 1)
+        .attr('height', h);
+
+      //Transpose the data into layers by Sentiment
+      var sent = d3.layout.stack()(
+        ['POSITIVE', 'NEUTRAL', 'NEGATIVE', 'MIXED'].map(function (sentiment) {
+          return data.map(function (d) {
+            return { x: d.time, y: +d[sentiment] };
+          });
+        }),
+      );
+
+      //Add a group for each Sentiment
+      var sentiment = svg
+        .selectAll('g.sentiment')
+        .data(sent)
+        .enter()
+        .append('svg:g')
+        .attr('class', 'sentiment')
+        .style('fill', function (d, i) {
+          return z(i);
+        })
+        .style('stroke', function (d, i) {
+          return d3.rgb(z(i)).darker();
+        });
+
+      //Add a rectangle for each time value
+      var rect = sentiment
+        .selectAll('rect')
+        .data(Object)
+        .enter()
+        .append('svg:rect')
+        .attr('x', function (d, i) {
+          return x(i) - 0.5;
+        })
+        .attr('y', function (d) {
+          return h - y(d.y0) - y(d.y);
+        })
+        .attr('height', function (d) {
+          return y(d.y);
+        })
+        .attr('width', w);
+
+      svg
+        .append('line')
+        .attr('x1', 0)
+        .attr('x2', w * data.length)
+        .attr('y1', h - 0.5)
+        .attr('y2', h - 0.5)
+        .style('stroke', '#000');
+
+      function redraw(data) {
+        //Transpose the data into layers by Sentiment
+        var sent = d3.layout.stack()(
+          ['POSITIVE', 'NEUTRAL', 'NEGATIVE', 'MIXED'].map(function (sentiment) {
+            return data.map(function (d) {
+              return { x: d.time, y: +d[sentiment] };
+            });
+          }),
+        );
+
+        //Add a group for each Sentiment
+        var sentiment = svg
+          .selectAll('g.sentiment')
+          .data(sent)
+          .attr('class', 'sentiment')
+          .style('fill', function (d, i) {
+            return z(i);
+          })
+          .style('stroke', function (d, i) {
+            return d3.rgb(z(i)).darker();
+          });
+
+        sentiment
+          .selectAll('rect')
+          .data(Object)
+          .transition()
+          .duration(1000)
+          .attr('y', function (d) {
+            return h - y(d.y0) - y(d.y);
+          })
+          .attr('height', function (d) {
+            return y(d.y);
+          });
+
+        //                console.info(JSON.stringify(data));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,558 @@
+body#nikeOnlineStore {
+    font-family: helveticaneue;
+    background: #161616;
+}
+#nikeContainer {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 1280px;
+    height: 720px;
+    background: url("../img/nike-store-bg-01.png");
+}
+#nikeDateWidget {
+    position: absolute;
+    top: 48px;
+    left: 645px;
+    width: 156px;
+    height: 15px;
+    font-size: 14px;
+    line-height: 15px;
+    color: #ff9900;
+    background: rgba(84, 119, 255, 0.31);
+    border-radius: 10px;
+}
+#nikeTitle {
+    position: absolute;
+    top: 30px;
+    left: 818px;
+    width: 420px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+#nikeConversations {
+     position: absolute;
+     top: 125px;
+     left: 25px;
+     width: 315px;
+     height: 555px;
+ }
+#nikeConversationsChart {
+    position: relative;
+    width: 310px;
+    height: 545px;
+    margin-top: 5px;
+}
+.title {
+    font-family: helveticaneue;
+    color: #ffffff;
+    font-size: 14px;
+}
+#titleConversations {
+     position: absolute;
+     top: 685px;
+     left: 30px;
+     width: 295px;
+     height: 20px;
+     padding-left: 10px;
+ }
+/* BEGIN CITIES */
+#articleCountCities {
+    position: absolute;
+    top: 234px;
+    left: 940px;
+    width: 96px;
+    height: 20px;
+    font-family: helveticaneue;
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+}
+#titleArticleCities {
+    position: absolute;
+    top: 260px;
+    left: 960px;
+    width: 60px;
+    height: 8px;
+    font-family: helveticaneue;
+    font-size: 8px;
+    color: #fff;
+    line-height: 8px;
+    text-align: center;
+}
+#titleCities {
+    position: absolute;
+    top: 340px;
+    left: 370px;
+    width: 160px;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+}
+.title-cities {
+    font-family: helveticaneue;
+    color: #ffffff;
+    font-size: 12px;
+}
+#pieContainerCities {
+    position: absolute;
+    top: 150px;
+    left: 895px;
+    width: 190px;
+    height: 190px;
+}
+#pieChartCities {
+    position: relative;
+    width: 190px;
+    height: 190px;
+}
+#citiesOne {
+     position: absolute;
+     top: 155px;
+     left: 545px;
+     width: 85px;
+     height: 20px;
+     padding-left: 10px;
+     line-height: 20px;
+ }
+#citiesOneArticle {
+    position: absolute;
+    top: 155px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#citiesOneNeg {
+    position: absolute;
+    top: 155px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesOnePos {
+    position: absolute;
+    top: 155px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesTwo {
+     position: absolute;
+     top: 195px;
+     left: 545px;
+     width: 85px;
+     height: 20px;
+     padding-left: 10px;
+     line-height: 20px;
+ }
+#citiesTwoArticle {
+    position: absolute;
+    top: 195px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#citiesTwoNeg {
+    position: absolute;
+    top: 195px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesTwoPos {
+    position: absolute;
+    top: 195px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesThree {
+    position: absolute;
+    top: 235px;
+    left: 545px;
+    width: 85px;
+    height: 20px;
+    padding-left: 10px;
+    line-height: 20px;
+}
+#citiesThreeArticle {
+    position: absolute;
+    top: 235px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#citiesThreeNeg {
+    position: absolute;
+    top: 235px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesThreePos {
+    position: absolute;
+    top: 235px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesFour {
+    position: absolute;
+    top: 275px;
+    left: 545px;
+    width: 85px;
+    height: 20px;
+    padding-left: 10px;
+    line-height: 20px;
+}
+#citiesFourArticle {
+    position: absolute;
+    top: 275px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#citiesFourNeg {
+    position: absolute;
+    top: 275px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesFourPos {
+    position: absolute;
+    top: 275px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesFive {
+    position: absolute;
+    top: 315px;
+    left: 545px;
+    width: 85px;
+    height: 20px;
+    padding-left: 10px;
+    line-height: 20px;
+}
+#citiesFiveArticle {
+    position: absolute;
+    top: 315px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#citiesFiveNeg {
+    position: absolute;
+    top: 315px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#citiesFivePos {
+    position: absolute;
+    top: 315px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+/* BEGIN FEATURES */
+#articleCountFeatures {
+    position: absolute;
+    top: 514px;
+    left: 940px;
+    width: 96px;
+    height: 20px;
+    font-family: helveticaneue;
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+}
+#titleArticleFeatures {
+    position: absolute;
+    top: 540px;
+    left: 960px;
+    width: 60px;
+    height: 8px;
+    font-family: helveticaneue;
+    font-size: 8px;
+    color: #fff;
+    line-height: 8px;
+    text-align: center;
+}
+#titleFeatures {
+    position: absolute;
+    top: 620px;
+    left: 370px;
+    width: 160px;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+}
+.title-features {
+    font-family: helveticaneue;
+    color: #ffffff;
+    font-size: 12px;
+}
+#pieContainerFeatures {
+    position: absolute;
+    top: 430px;
+    left: 895px;
+    width: 190px;
+    height: 190px;
+}
+#pieChartFeatures {
+    position: relative;
+    width: 190px;
+    height: 190px;
+}
+#featuresOne {
+    position: absolute;
+    top: 435px;
+    left: 545px;
+    width: 85px;
+    height: 20px;
+    padding-left: 10px;
+    line-height: 20px;
+}
+#featuresOneArticle {
+    position: absolute;
+    top: 435px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#featuresOneNeg {
+    position: absolute;
+    top: 435px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresOnePos {
+    position: absolute;
+    top: 435px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresTwo {
+    position: absolute;
+    top: 475px;
+    left: 545px;
+    width: 85px;
+    height: 20px;
+    padding-left: 10px;
+    line-height: 20px;
+}
+#featuresTwoArticle {
+    position: absolute;
+    top: 475px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#featuresTwoNeg {
+    position: absolute;
+    top: 475px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresTwoPos {
+    position: absolute;
+    top: 475px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresThree {
+    position: absolute;
+    top: 515px;
+    left: 545px;
+    width: 85px;
+    height: 20px;
+    padding-left: 10px;
+    line-height: 20px;
+}
+#featuresThreeArticle {
+    position: absolute;
+    top: 515px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#featuresThreeNeg {
+    position: absolute;
+    top: 515px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresThreePos {
+    position: absolute;
+    top: 515px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresFour {
+    position: absolute;
+    top: 555px;
+    left: 545px;
+    width: 85px;
+    height: 20px;
+    padding-left: 10px;
+    line-height: 20px;
+}
+#featuresFourArticle {
+    position: absolute;
+    top: 555px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#featuresFourNeg {
+    position: absolute;
+    top: 555px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresFourPos {
+    position: absolute;
+    top: 555px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresFive {
+    position: absolute;
+    top: 595px;
+    left: 545px;
+    width: 85px;
+    height: 20px;
+    padding-left: 10px;
+    line-height: 20px;
+}
+#featuresFiveArticle {
+    position: absolute;
+    top: 595px;
+    left: 640px;
+    width: 85px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: right;
+}
+#featuresFiveNeg {
+    position: absolute;
+    top: 595px;
+    left: 740px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+#featuresFivePos {
+    position: absolute;
+    top: 595px;
+    left: 1140px;
+    width: 90px;
+    height: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+
+
+

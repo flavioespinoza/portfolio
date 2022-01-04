@@ -1,0 +1,64 @@
+#myContainer {
+    margin-top: 20px;
+}
+#tweetChart {
+    background: rgba(173, 216, 230, 0.33);
+}
+.tweet-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.tweet-thumb {
+    position: absolute;
+    width: 50px;
+    height:50px;
+}
+.tweet-name {
+    position: relative;
+    float: left;
+    height: 12px;
+    width: 60%;
+    margin-top: 2px;
+    margin-left: 52px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #F90;
+    overflow: hidden;
+    background: rgba(144, 238, 144, 0.47);
+}
+.tweet-followers {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: right;
+    color: #0F0;
+}
+.tweet-name:hover {
+    color: #0F0;
+}
+.tweet-text-block {
+    position: relative;
+    float: left;
+    margin-top: 2px;
+    margin-left: 52px;
+    height: 30px;
+    font-size: 10px;
+    line-height: 10px;
+    color: #CCC;
+    overflow: hidden;
+    background: rgba(255, 0, 0, 0.29);
+}
+#sentimentChart {
+    height: 300px;
+    background: #add8e6;
+}
+#tagCloud {
+    height: 300px;
+    background: pink;
+}

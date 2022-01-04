@@ -1,0 +1,1 @@
+scp -r ./build/* /var/www/flavioespinoza.com/html

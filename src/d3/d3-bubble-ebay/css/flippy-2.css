@@ -1,0 +1,274 @@
+#ebayContainer {
+    position: relative;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+}
+#ebayTitle {
+    position: absolute;
+    height: 98px;
+    top: 0px;
+    left: 0px;
+    font-size: 48px;
+    line-height: 48px;
+    margin: 18px 0;
+}
+#ebayLogo {
+    position: absolute;
+    width: 200px;
+    height: 98px;
+    top: 0px;
+    right: 0px;
+    background: url("../img/logo-ebay-transparent.png");
+    z-index: 2;
+}
+#flippy_demo{
+    position: relative;
+}
+
+#flippyBox{
+    position: absolute;
+    top:100px;
+    left: 0px;
+    background: olive;
+    color: #333;
+    font-family: MuseoSans-500;
+    font-size: 20px;
+    width: 1920px;
+    height: 636px;
+    text-align: center;
+    line-height: 300px;
+    z-index: 10;
+}
+
+#flippyBox .top{
+    padding:5px;
+}
+
+#flippyBox .left, #flippyBox .bottom{
+    text-align: center;
+    color: #FFF;
+}
+
+#flippyButtons{
+    position: absolute;
+    top: 730px;
+    left: 0px;
+    width: 1920px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 20px;
+}
+#flippyContents{
+    display: none;
+}
+.flippyButton, .flippyMenu {
+    position: relative;
+    background: #333;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#333)) #333;
+    background: -moz-linear-gradient(0 100% 90deg, #333, #666) #333;
+    color: #b6d635;
+    padding: 5px 10px;
+    width: 450px;
+    height: 20px;
+    float: left;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.flippy_download{
+    margin: 30px 5px;
+}
+.flippy_download a{
+    background: #b6d635;
+    background: -moz-linear-gradient(0 100% 90deg, #d4e39e 0%, #b6d635 100%) #b6d635;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4e39e), to(#b6d635)) #b6d635;
+    color: #333;
+    padding: 5px 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    margin: 30px 5px;
+}
+.flippy_download a:hover{
+    text-decoration: none;
+}
+.flippyButton:hover, .flippyMenu:hover{
+    text-decoration:none;
+    background: #333;
+    color: orange;
+}
+.page .addThis{width:310px;position:absolute;right:0;
+}
+.pin-map {
+    width: 1920px;
+    height: 636px;
+}
+#usMap, #usMapTwo {
+    background: url("../img/us-map.png");
+}
+#worldMap {
+     background: url("../img/global-map-2.png");
+ }
+#mapAustralia {
+    background: url("../img/map-australia.png");
+}
+#mapGermany {
+    background: url("../img/map-germany.png");
+}
+#mapColorado {
+    background: url("../img/map-colorado.png");
+}
+#mapUtah {
+    background: url("../img/map-utah.png");
+}
+#stateNav, #countryNav  {
+    display: none;
+    z-index: 200;
+}
+#stateNav ul, #countryNav ul {
+    position: absolute;
+    top: 31px;
+    left:0px;
+    margin: 0px;
+    height: 300px;
+    overflow: auto;
+
+}
+#stateNav ul li, #countryNav ul li {
+    text-decoration: none;
+    list-style-type: none;
+    color: #FFF;
+    background: olive;
+    padding: 5px 10px;
+    width: 450px;
+    height: 20px;
+    border-bottom: 1px solid white;
+}
+#stateNav ul li:hover, #countryNav ul li:hover {
+    color: #333;
+    background: orange;
+    font-weight: bold;
+}
+#topnav {
+    width: 100%;
+    height: 44px;
+    background: #000000;
+}
+#mapDataContainer {
+    position: relative;
+    margin-top: 140px;
+}
+.sentiment {
+    position: relative;
+    width: 469px;
+    height: 300px;
+    z-index: -10;
+    float: left;
+    margin: 0 5px;
+    background: #add8e6;
+}
+#usMapSentiment {
+    background: url("../img/sentiment-co2.png")
+}
+#stateSentiment {
+    opacity: 0;
+    background: url("../img/sentiment-co2.png")
+}
+#worldMapSentiment {
+    opacity: 1;
+    background: url("../img/sentiment-co2.png")
+}
+#countryMapSentiment {
+    opacity: 0;
+    background: url("../img/sentiment-co2.png")
+}
+.active {
+    color: #FFF;
+    background: orange;
+}
+
+#usTagCloud, #usTagCloudTwo {
+    background: url("../img/tag-cloud-world.png");
+}
+#worldTagCloud {
+    background: url("../img/tag-cloud-world.png");
+}
+#tagCloudAustralia {
+    background: url("../img/tag-cloud-australia.png");
+}
+#tagCloudColorado {
+    background: url("../img/tag-cloud-co.png");
+}
+.border {
+    border: 1px solid gray;
+}
+#usWords {
+    background: url("../img/tag-cloud-words.png")
+}
+#stateWords {
+    opacity: 0;
+    background: url("../img/tag-cloud-words.png")
+}
+#worldWords {
+    opacity: 1;
+    background: url("../img/tag-cloud-words.png")
+}
+#countryWords {
+    opacity: 0;
+    background: url("../img/tag-cloud-words.png")
+}
+
+#ebayDataOne {
+    position: absolute;
+    top: 100px;
+    opacity: 1;
+    width: 1920px;
+    height: 962px;
+    background: url("../img/eBay-data1.png")
+}
+#ebayDataTwo {
+    position: absolute;
+    top: 100px;
+    display: none;
+    width: 1920px;
+    height: 962px;
+    background: url("../img/eBay-data2.png")
+}
+#dataToggle {
+    position: absolute;
+    top: 297px;
+    width: 1920px;
+    height: 184px;
+    z-index: 3000;
+    cursor: pointer;
+}
+
+#topnav ul {
+    margin: 0;
+}
+#topnav li {
+     float: left;
+     list-style: none;
+     margin-left: 20px;
+     padding-top: 10px;
+ }
+.ebay-nav {
+    color: #b6d635;
+    font-size: 16px;
+}
+.ebay-nav:hover {
+    color: #FFF;
+}
+.e-active {
+    color: orange;
+}
+
